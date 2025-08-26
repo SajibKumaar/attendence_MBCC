@@ -1,0 +1,226 @@
+/* === Your Original CSS === */
+body {
+  background: linear-gradient(135deg, #e0f7fa, #f4f7f9);
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 95%;
+  max-width: 650px;
+  background: #f1f498;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(112, 23, 185, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 12px 30px rgba(112, 23, 185, 0.2);
+}
+
+h1 {
+  margin-bottom: 25px;
+  color: #193451;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 65%;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.add-btn { background: #007bff; color: white; }
+.present-btn { background: #cef39e; color: rgb(0, 0, 0); }
+.present-btn:hover {
+  background:  rgb(8, 129, 8);
+  color: rgb(255, 255, 255); /* slightly darker on hover */
+}
+.absent-btn { background:  #cef39e; color: rgb(0, 0, 0); }
+.absent-btn:hover {
+  background:  rgb(255, 0, 0);
+  color: rgb(255, 255, 255); /* slightly darker on hover */
+}
+.submit-btn {
+  background: #6c757d; 
+  color: white; 
+  display: block; 
+  margin: 10px auto;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #5aaeef;
+  color: black; /* slightly darker on hover */
+}
+
+.view-btn { background: #3d8fc6; color: white; font-size: 18px; padding: 12px 25px; }
+
+.view-btn:hover {
+  background: #5a14cb;
+  color: yellow; /* slightly darker on hover */
+}
+
+.photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px dashed #d72e2e;
+  object-fit: cover;
+  cursor: pointer;
+  margin: 15px auto;
+  display: block;
+  line-height: 100px;
+  font-size: 14px;
+  color: #17db24;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.photo:hover {
+  border-color: #007bff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+.student-name {
+  color: #fbfbfb; /* any color you want */
+  font-size: 18px; /* adjust size */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #4d12f1;
+}
+
+#reportSection table th {
+  background-color: #59e449;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+}
+
+#reportSection table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#reportSection table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.student-entry {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  background: #032c34;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.student-entry:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* === Responsive Media Queries === */
+
+/* Tablets (<= 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 20px;
+    max-width: 90%;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  input[type="text"] {
+    width: 80%;
+  }
+}
+
+/* Large Phones / Small Tablets (<= 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 18px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  button {
+    width: 100%;
+    margin: 8px 0;
+  }
+  input[type="text"] {
+    width: 100%;
+    font-size: 14px;
+  }
+  table {
+    font-size: 14px;
+  }
+  .photo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Small Phones (<= 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  .container {
+    padding: 15px;
+    border-radius: 12px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  .student-name {
+    font-size: 16px;
+  }
+  table th, table td {
+    padding: 6px;
+    font-size: 12px;
+  }
+  .view-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
